@@ -87,6 +87,7 @@ jobs:
         run: mv ${{ matrix.config.opendshfile }}.img opendsh-${{ steps.get_version.outputs.version }}.img
       - 
         name: Package zip
+        id: packagezip
         run: |
           IMG_FILENAME="opendsh-${{ steps.get_version.outputs.version }}.img"
           ZIP_FILENAME="opendsh-${{ steps.get_version.outputs.version }}.zip"
